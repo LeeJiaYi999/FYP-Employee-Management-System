@@ -1,7 +1,7 @@
      <html>
     <head>
         <meta charset="UTF-8">
-        <title>Leave Application Details</title>
+        <title>My Profile</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -36,7 +36,7 @@
                             <!-- general form elements -->
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title">Leave Application Details</h3>
+                                    <h3 class="box-title">My Profile</h3>
                                 </div><!-- /.box-header -->
                                 <!-- form start -->
                                 <form role="form">
