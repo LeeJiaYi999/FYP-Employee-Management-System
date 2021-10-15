@@ -31,7 +31,7 @@
                 <section class="content-header">
                     <h1>
                         Check In Attendance
-                        <small>[List]</small>
+                        <small>[Form]</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -47,7 +47,7 @@
                             <!-- general form elements -->
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title">Check In Attendance</h3>
+                                    <h3 class="box-title">Check In Attendance Form</h3>
                                 </div><!-- /.box-header -->
                                 <!-- form start -->
                                 <form role="form">
@@ -70,11 +70,6 @@
                                                     <label>Attendance Date</label>
                                                     <input type="text" class="form-control" name="adate" id="adate" placeholder="Attendance Date" disabled/>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label>Attendance Description</label>
-                                                    <input type="text" class="form-control" name="ades" id="ades" placeholddeser="Enter Attendance Description">
-                                                </div> 
-
                                             </div>
                                         </div>
 

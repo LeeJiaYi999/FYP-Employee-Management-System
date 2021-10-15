@@ -23,7 +23,7 @@
                 <section class="content-header">
                     <h1>
                         Apply Leave
-                        <small>[List]</small>
+                        <small>[Form]</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -39,7 +39,7 @@
                             <!-- general form elements -->
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title">Leave Form</h3>
+                                    <h3 class="box-title">Apply Leave Form</h3>
                                 </div><!-- /.box-header -->
                                 <!-- form start -->
                                 <form role="form">
@@ -63,9 +63,8 @@
                                                     <input type="date" class="form-control" name="edate" id="edate" placeholder="Enter End Date">
                                                     </div>
                                                 <div class="form-group">
-                                                    <label>Employee Type</label>
+                                                    <label>Leave Type</label>
                                                     <select class="form-control">
-                                                        <option>Sick Leave</option>
                                                         <option>Annual Leave</option>
                                                         <option>Unpaid Leave</option>
                                                     </select>

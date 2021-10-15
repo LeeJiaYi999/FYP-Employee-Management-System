@@ -1,7 +1,9 @@
 <html>
+<body> 
+    <html>
     <head>
         <meta charset="UTF-8">
-        <title>Attendance Check Out</title>
+        <title>Attendance Details</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -27,17 +29,6 @@
         ?>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <aside class="right-side">
-                <!-- Content Header (Page header) -->
-                <section class="content-header">
-                    <h1>
-                        Check Out Attendance
-                        <small>[Form]</small>
-                    </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li><a href="#">Check Out</a></li>
-                    </ol>
-                </section>
 
                 <!-- Main content -->
                 <section class="content">
@@ -47,7 +38,7 @@
                             <!-- general form elements -->
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title">Check Out Attendance Form</h3>
+                                    <h3 class="box-title">View Attendance Details</h3>
                                 </div><!-- /.box-header -->
                                 <!-- form start -->
                                 <form role="form">
@@ -55,30 +46,38 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>Check In Time</label>
-                                                    <input type="text" class="form-control" name="checkin" id="checkin" placeholder="Check In Time" disabled/>
-                                                </div>                                            
-                                                <div class="form-group">
-                                                    <label>Status</label>
-                                                    <input type="text" class="form-control" name="status" id="status" placeholder="Status" disabled/>
+                                                    <label>Employee ID</label>
+                                                    <input type="text" class="form-control" name="eid" id="eid">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Attendance Date</label>
-                                                    <input type="text" class="form-control" name="adate" id="adate" placeholder="Attendance Date" disabled/>
+                                                    <label>Employee Name</label>
+                                                    <input type="text" class="form-control" name="ename" id="ename">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Check In Time</label>
+                                                    <input type="text" class="form-control" name="cin" id="cin">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Check Out Time</label>
-                                                    <input type="text" class="form-control" name="checkout" id="checkout" placeholder="Check Out Time" disabled/>
+                                                    <input type="text" class="form-control" name="cout" id="cout">
+                                                </div> 
+                                                <div class="form-group">
+                                                    <label>Status</label>
+                                                    <input type="text" class="form-control" name="status" id="status">
                                                 </div>
-
-
+                                                <div class="form-group">
+                                                    <label>Attendance Date</label>
+                                                    <input type="text" class="form-control" name="adate" id="adate">
+                                                </div>
                                             </div>
                                         </div>
 
                                     </div><!-- /.box-body -->
 
                                     <div class="box-footer">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                       <button type="submit" class="btn btn-success btn-flat" name="upload"><i class="fa fa-check-square-o"></i> Update</button>
+                                       <button type="submit" class="btn btn-danger btn-flat" name="delete"><i class="fa fa-trash"></i> Delete</button>
+                                       <button type="button" class="btn btn-default btn-flat pull-left" name="Cancel"><i class="fa fa-close"></i> Cancel</button>
                                     </div>
                                 </form>
                             </div><!-- /.box -->
@@ -96,5 +95,8 @@
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
         <script src="js/AdminLTE/app.js" type="text/javascript"></script>
+    </body>
+</html>
+
     </body>
 </html>
