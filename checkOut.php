@@ -1,3 +1,8 @@
+<?php
+session_start();
+include("db_connection.php");
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">

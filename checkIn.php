@@ -1,3 +1,7 @@
+<?php
+session_start();
+include("db_connection.php");
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -13,17 +17,8 @@
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-
-        <?php include("sidebar.php");
-        ?>
         <?php
-//        $attdate = date("d-m-y");
-//        echo $attdate;
-//        echo"<br>";
-//        date_default_timezone_set("Malaysia");
-//        $ctime = date("h:i:s A", time());
-//        echo $ctime;
-//        
+        include("sidebar.php");
         ?>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <aside class="right-side">

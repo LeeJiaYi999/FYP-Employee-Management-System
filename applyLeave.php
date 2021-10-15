@@ -1,3 +1,8 @@
+<?php
+session_start();
+include("db_connection.php");
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +20,8 @@
 
     </head>
     <body>
-       <?php include("sidebar.php");
+        <?php
+        include("sidebar.php");
         ?>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <aside class="right-side">
@@ -57,11 +63,11 @@
                                                 <div class="from-group">
                                                     <label>Start Date:</label>
                                                     <input type="date" class="form-control" name="sdate" id="sdate" placeholder="Enter Start Date">
-                                                    </div>
+                                                </div>
                                                 <div class="from-group">
                                                     <label>End Date:</label>
                                                     <input type="date" class="form-control" name="edate" id="edate" placeholder="Enter End Date">
-                                                    </div>
+                                                </div>
                                                 <div class="form-group">
                                                     <label>Leave Type</label>
                                                     <select class="form-control">
@@ -89,6 +95,14 @@
                     </div>   <!-- /.row -->
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
+            <footer class="main-footer">
+                <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+                All rights reserved.
+                <div class="float-right d-none d-sm-inline-block">
+                    <b>Version</b> 3.0.0
+                </div>
+            </footer>
+
         </div>
 
 

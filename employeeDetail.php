@@ -6,7 +6,7 @@ include("db_connection.php");
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Recruitment</title>
+        <title>Employee Details</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -25,11 +25,13 @@ include("db_connection.php");
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Recruitment
+                        Employee Details
+                        <small>[Modify&Delete]</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li><a href="#">Recruitment</a></li>
+                        <li><a href="home.php"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li><a href="employeeMain.php">Employee Main</a></li>
+                         <li class="active">Employee Details</li>
                     </ol>
                 </section>
 
@@ -41,7 +43,7 @@ include("db_connection.php");
                             <!-- general form elements -->
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title">Register New Employee</h3>
+                                    <h3 class="box-title">Employee Details</h3>
                                 </div><!-- /.box-header -->
                                 <!-- form start -->
                                 <form role="form">
@@ -69,68 +71,63 @@ include("db_connection.php");
                                                     <input type="text" class="form-control" name="eid" id="eid" placeholder="Employee ID" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Employee Name</label>
-                                                    <input type="text" class="form-control" name="ename" id="ename" placeholder="Enter Eployee Name">
+                                                    <label>First Name</label>
+                                                    <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter First Name" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Password</label>
-                                                    <input type="password" class="form-control" name="lname" id="lname" placeholder="Enter Password">
+                                                    <label>Last Name</label>
+                                                    <input type="text" class="form-control" name="lname" id="lname" placeholder="Enter Last Name" disabled>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>IC Number</label>
-                                                    <input type="text" class="form-control" name="ic" id="ic" placeholder="Enter IC Number">
+                                                    <input type="text" class="form-control" name="ic" id="ic" placeholder="Enter IC Number" disabled>
                                                 </div> 
                                                 <div class="form-group">
                                                     <label>Gender</label>
-                                                    <select class="form-control">
+                                                    <select class="form-control" disabled>
                                                         <option>Male</option>
                                                         <option>Female</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Employee Type</label>
-                                                    <select class="form-control">
+                                                    <select class="form-control" disabled>
                                                         <option>Admin</option>
                                                         <option>Employee</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Email</label>
-                                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email">
+                                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" disabled>
                                                 </div> 
                                             </div>
-
                                             <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Position</label>
-                                                    <input type="text" class="form-control" name="position" id="position" placeholder="Enter Position">
-                                                </div>
                                                 <div class="from-group">
                                                     <label>Birth Date</label>
-                                                    <input type="date" class="form-control" name="bdate" id="bdate" placeholder="Enter Birthdate">
+                                                    <input type="date" class="form-control" name="bdate" id="bdate" placeholder="Enter Birthdate" disabled>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Phone Number</label>
-                                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone Number">
+                                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone Number" disabled>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Leave Available</label>
-                                                    <input type="text" class="form-control" name="leave" id="leave" placeholder="Enter Leave Available">
+                                                    <input type="text" class="form-control" name="leave" id="leave" placeholder="Enter Leave Available" disabled>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Salary Amount</label>
-                                                    <input type="text" class="form-control" name="salary" id="salary" placeholder="Enter Salary Amount">
+                                                    <input type="text" class="form-control" name="salary" id="salary" placeholder="Enter Salary Amount" disabled>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Department Name</label>
-                                                    <select class="form-control">
+                                                    <select class="form-control" disabled>
                                                         <option>Sales</option>
                                                         <option>IT</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Address</label>
-                                                    <textarea class="form-control" name="address" id="address" rows="3" placeholder="Enter Address"></textarea>
+                                                    <textarea class="form-control" name="address" id="address" rows="3" placeholder="Enter Address" disabled></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,7 +135,11 @@ include("db_connection.php");
                                     </div><!-- /.box-body -->
 
                                     <div class="box-footer">
-                                        <button type="submit" class="btn btn-primary" onclick="add()" id="btnsave" >Submit</button>
+                                        <div class="row">
+                                            <div class="col-md-1"><button type="Modify" class="btn btn-primary" style="width:100%">Modify</button></div>
+                                            <div class="col-md-1"><button type="Cancel" class="btn btn-primary" style="width:100%">Cancel</button></div>
+                                            <div class="col-md-1"><button type="Delete" class="btn btn-primary" style="width:100%">Delete</button></div>                                              
+                                        </div>
                                     </div>
                                 </form>
                             </div><!-- /.box -->

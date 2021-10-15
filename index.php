@@ -1,3 +1,23 @@
+<?php
+session_start();
+include("db_connection.php");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $sql = "SELECT * FROM employee WHERE email = '$email' and password = '$password' LIMIT 1";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = mysqli_fetch_array($result)) {
+            $_SESSION["User"] = $row;
+            header("location: home.php");
+            exit();
+        }
+    } else {
+        echo '<script>alert("Please enter the correct email or password !")</script>';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html class="bg-black">
     <head>
@@ -19,13 +39,13 @@
         <![endif]-->
     </head>
     <body class="bg-black">
-<!--test-->
+        <!--test-->
         <div class="form-box" id="login-box">
             <div class="header">Sign In</div>
-            <form action="../../index.html" method="post">
+            <form  method="post">
                 <div class="body bg-gray">
                     <div class="form-group">
-                        <input type="text" name="userid" class="form-control" placeholder="User ID"/>
+                        <input type="text" name="email" class="form-control" placeholder="Email"/>
                     </div>
                     <div class="form-group">
                         <input type="password" name="password" class="form-control" placeholder="Password"/>
@@ -36,9 +56,9 @@
                 </div>
                 <div class="footer">                                                               
                     <button type="submit" class="btn bg-olive btn-block">Sign me in</button>  
-                    
+
                     <p><a href="#">I forgot my password</a></p>
-                    
+
                     <a href="register.html" class="text-center">Register a new membership</a>
                 </div>
             </form>

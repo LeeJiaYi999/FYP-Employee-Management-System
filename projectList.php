@@ -7,7 +7,7 @@ include("db_connection.php");
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Attendance List</title>
+        <title>Project List</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -34,12 +34,12 @@ include("db_connection.php");
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Employee Attendance Table
+                        Project List Table
                         <small>[List]</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="home.php"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Personal Attendance</li>
+                        <li class="active">Project List Table</li>
                     </ol>
                 </section>
 
@@ -49,39 +49,47 @@ include("db_connection.php");
                         <div class="col-xs-12">                           
                             <div class="box">
                                 <div class="box-header">
-                                    <h3 class="box-title">Employee Attendance History</h3>                                    
+                                    <h3 class="box-title">Available Project List</h3>    
                                 </div><!-- /.box-header -->
-                                <div class="box-body">
-                                    <table id="example1" class="table table-bordered">
+
+                                <div class="box-body table-responsive">
+                                    <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Check In</th>
-                                                <th>Check Out</th>
-                                                <th>Attendance Date</th>
+                                                <th>Project ID</th>
+                                                <th>Project Title</th>
+                                                <th>Project Description</th>
+                                                <th>Department</th>
+                                                <th>Assign Date</th>
+                                                <th>Due Date</th>
+                                                <th>View</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                          
                                             <tr>
                                                 <td>Trident</td>
-                                                <td>AOL browser (AOL desktop)</td>
-                                                <td>Win XP</td>
-                                                <td>6</td>
-                                                <td>A</td>
-                                            </tr>                                            
+                                                <td>Internet
+                                                    Explorer 4.0</td>
+                                                <td>Win 95+</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div><!-- /.box-body -->
+                                <div class="box-footer">
+                                    <label>Create a new project?</label>
+                                    <button class="btn btn-primary" onclick="location.href = 'projectAdd.php'">Add</button>
+                                </div>
                             </div><!-- /.box -->
                         </div>
                     </div>
-
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
-
 
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>

@@ -1,4 +1,21 @@
-     <html>
+<?php
+session_start();
+include("db_connection.php");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $sql = "UPDATE employee SET employee_name='".$_POST['ename']."',image=null,password='".$_POST['password']."',"
+            . "ic_no='".$_POST['ic']."',email='".$_POST['email']."',phone_no='".$_POST['phone']."',address='".$_POST['address']."' WHERE employee_id='".$_SESSION["User"]["employee_id"]."'";
+    if($conn->query($sql)){
+        header("location: home.php");
+        
+    }else{
+        echo '<script>alert("Update fail !\nContact IT department for maintainence");'
+        . 'var currentURL = window.location.href;window.location.href = currentURL;</script>';
+    }
+}
+?>
+<html>
     <head>
         <meta charset="UTF-8">
         <title>My Profile</title>
@@ -13,17 +30,8 @@
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-
-        <?php include("sidebar.php");
-        ?>
         <?php
-//        $attdate = date("d-m-y");
-//        echo $attdate;
-//        echo"<br>";
-//        date_default_timezone_set("Malaysia");
-//        $ctime = date("h:i:s A", time());
-//        echo $ctime;
-//        
+        include("sidebar.php");
         ?>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <aside class="right-side">
@@ -39,7 +47,7 @@
                                     <h3 class="box-title">My Profile</h3>
                                 </div><!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form role="form" method="post">
                                     <div class="box-body">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -61,34 +69,46 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>Employee Name</label>
-                                                    <input type="text" class="form-control" name="ename" id="ename" placeholder="Enter Eployee Name">
+                                                    <input type="text" class="form-control" name="ename" id="ename" placeholder="Enter Eployee Name" value="<?php
+                                                    echo $_SESSION["User"]["employee_name"];
+                                                    ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Password</label>
-                                                    <input type="password" class="form-control" name="lname" id="lname" placeholder="Enter Password">
+                                                    <input type="password" class="form-control" name="password" id="lname" placeholder="Enter Password" value="<?php
+                                                    echo $_SESSION["User"]["password"];
+                                                    ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>IC Number</label>
-                                                    <input type="text" class="form-control" name="ic" id="ic" placeholder="Enter IC Number">
+                                                    <input type="text" class="form-control" name="ic" id="ic" placeholder="Enter IC Number" value="<?php
+                                                    echo $_SESSION["User"]["ic_no"];
+                                                    ?>">
                                                 </div> 
                                                 <div class="form-group">
                                                     <label>Email</label>
-                                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email">
+                                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" value="<?php
+                                                    echo $_SESSION["User"]["email"];
+                                                    ?>">
                                                 </div> 
                                                 <div class="form-group">
                                                     <label>Phone Number</label>
-                                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone Number">
+                                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone Number" value="<?php
+                                                    echo $_SESSION["User"]["phone_no"];
+                                                    ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Address</label>
-                                                    <textarea class="form-control" name="address" id="address" rows="3" placeholder="Enter Address"></textarea>
+                                                    <textarea class="form-control" name="address" id="address" rows="3" placeholder="Enter Address" ><?php
+                                                        echo $_SESSION["User"]["address"];
+                                                        ?></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
                                     </div><!-- /.box-body -->
 
-                                   <div class="box-footer">
+                                    <div class="box-footer">
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
                                 </form>
@@ -110,5 +130,5 @@
     </body>
 </html>
 
-    </body>
+</body>
 </html>

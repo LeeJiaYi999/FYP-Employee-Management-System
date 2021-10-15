@@ -7,7 +7,7 @@ include("db_connection.php");
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Attendance List</title>
+        <title>Employee List</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -34,12 +34,12 @@ include("db_connection.php");
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Employee Attendance Table
+                        Employee List Table
                         <small>[List]</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="home.php"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Personal Attendance</li>
+                        <li class="active">Employee List Table</li>
                     </ol>
                 </section>
 
@@ -49,30 +49,41 @@ include("db_connection.php");
                         <div class="col-xs-12">                           
                             <div class="box">
                                 <div class="box-header">
-                                    <h3 class="box-title">Employee Attendance History</h3>                                    
+                                    <h3 class="box-title">All Employee Details</h3>                                    
                                 </div><!-- /.box-header -->
-                                <div class="box-body">
-                                    <table id="example1" class="table table-bordered">
+                                <div class="box-body table-responsive">
+                                    <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
                                                 <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Check In</th>
-                                                <th>Check Out</th>
-                                                <th>Attendance Date</th>
+                                                <th>First Name</th>
+                                                <th>Last Name(s)</th>
+                                                <th>Position</th>
+                                                <th>Email</th>
+                                                <th>View</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                          
                                             <tr>
                                                 <td>Trident</td>
-                                                <td>AOL browser (AOL desktop)</td>
-                                                <td>Win XP</td>
-                                                <td>6</td>
-                                                <td>A</td>
-                                            </tr>                                            
+                                                <td>Internet
+                                                    Explorer 4.0</td>
+                                                <td>Win 95+</td>
+                                                <td> 4</td>
+                                                <td>X</td>
+                                                <td>v</td>
+                                            </tr>
+
                                         </tbody>
                                     </table>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="box-footer">
+                                                <label>Add a new employee?</label>
+                                                <button class="btn btn-primary" onclick="location.href = 'recruitment.php'">Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div><!-- /.box-body -->
                             </div><!-- /.box -->
                         </div>
@@ -95,17 +106,17 @@ include("db_connection.php");
 
         <!-- page script -->
         <script type="text/javascript">
-            $(function () {
-                $("#example1").dataTable();
-                $('#example2').dataTable({
-                    "bPaginate": true,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": true,
-                    "bInfo": true,
-                    "bAutoWidth": false
-                });
-            });
+                                                    $(function () {
+                                                        $("#example1").dataTable();
+                                                        $('#example2').dataTable({
+                                                            "bPaginate": true,
+                                                            "bLengthChange": false,
+                                                            "bFilter": false,
+                                                            "bSort": true,
+                                                            "bInfo": true,
+                                                            "bAutoWidth": false
+                                                        });
+                                                    });
         </script>
 
     </body>
