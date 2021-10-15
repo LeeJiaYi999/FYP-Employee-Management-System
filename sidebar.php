@@ -82,69 +82,74 @@
                     </li>
                     <li>
 
-                            <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-bar-chart-o"></i>
-                                <span>Attendance</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="checkIn.php"><i class="fa fa-angle-double-right"></i> Check In</a></li>
-                                <li><a href="checkOut.php"><i class="fa fa-angle-double-right"></i> Check Out</a></li>
-                                <li><a href="viewAttendance.php"><i class="fa fa-angle-double-right"></i> Attendance History</a></li>
-                                <li><a href="personalAttendance.php"><i class="fa fa-angle-double-right"></i> Personal History</a></li>
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-bar-chart-o"></i>
-                                <span>Announcement</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="recruitment.php">
-                                <i class="fa fa-laptop"></i>
-                                <span>Recruitment</span>
-                            </a>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span>Attendance</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="checkIn.php"><i class="fa fa-angle-double-right"></i> Check In</a></li>
+                            <li><a href="checkOut.php"><i class="fa fa-angle-double-right"></i> Check Out</a></li>
+                            <li><a href="viewAttendance.php"><i class="fa fa-angle-double-right"></i> Attendance History</a></li>
+                            <li><a href="personalAttendance.php"><i class="fa fa-angle-double-right"></i> Personal History</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="announcement.php">
+                            <i class="fa fa-laptop"></i>
+                            <span>Announcement</span>
+                        </a>
 
-                        </li>
-                        <li>
-                            <a href="employeeMain.php">
-                                <i class="fa fa-edit"></i> <span>Employee Management</span>
-                            </a>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-table"></i> <span>Leave</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="applyLeave.php"><i class="fa fa-angle-double-right"></i> Apply Leave</a></li>
-                                <li><a href="leaveApplication.php"><i class="fa fa-angle-double-right"></i> Leave Application</a></li>
-                                <li><a href="leaveHistory.php"><i class="fa fa-angle-double-right"></i> Leave History</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="pages/calendar.html">
-                                <i class="fa fa-calendar"></i> <span>Task</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/mailbox.html">
-                                <i class="fa fa-envelope"></i> <span>Payroll</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-folder"></i> <span>Training</span>
-                            </a>
-                        </li>
+                    </li>
+                    <li>
+                        <a href="recruitment.php">
+                            <i class="fa fa-laptop"></i>
+                            <span>Recruitment</span>
+                        </a>
+
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-table"></i> <span>Employee Management</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="departmentList.php"><i class="fa fa-angle-double-right"></i> Department</a></li>
+                            <li><a href="employeeList.php"><i class="fa fa-angle-double-right"></i> Employee</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-table"></i> <span>Leave</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="applyLeave.php"><i class="fa fa-angle-double-right"></i> Apply Leave</a></li>
+                            <li><a href="leaveApplication.php"><i class="fa fa-angle-double-right"></i> Leave Application</a></li>
+                            <li><a href="leaveHistory.php"><i class="fa fa-angle-double-right"></i> Leave History</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-table"></i> <span>Task Tracking</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="projectList.php"><i class="fa fa-angle-double-right"></i> Project</a></li>
+                            <li><a href="taskList.php"><i class="fa fa-angle-double-right"></i> Task</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="pages/mailbox.html">
+                            <i class="fa fa-envelope"></i> <span>Payroll</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="trainingList.php">
+                            <i class="fa fa-folder"></i> <span>Training</span>
+                        </a>
+                    </li>
                 </ul>
             </section>
             <!-- /.sidebar -->

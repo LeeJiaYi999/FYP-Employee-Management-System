@@ -2,7 +2,7 @@
 <html class="bg-black">
     <head>
         <meta charset="UTF-8">
-        <title>Employee Main</title>
+        <title>Add Department</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -25,12 +25,12 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Employee Management
-                        <small>[Main]</small>
+                        Department
+                        <small>[Add]</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="home.php"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Employee Management</li>
+                        <li class="active">Add New Department</li>
                     </ol>
                 </section>
 
@@ -42,48 +42,32 @@
                             <!-- general form elements -->
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title">Find Employee</h3>
+                                    <h3 class="box-title">Add Department</h3>
                                 </div><!-- /.box-header -->
                                 <!-- form start -->
-<!--                                <form role="form">-->
+                                <form role="form">
                                     <div class="box-body">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>Department</label>
-                                                    <select class="form-control">
-                                                        <option>Sales</option>
-                                                        <option>Marketing</option>
-                                                        <option>Production</option>
-                                                        <option>Accounting</option>
-                                                        <option>General</option>
-                                                    </select>
+                                                    <label for="departmentid">Department ID</label>
+                                                    <input type="text" class="form-control" id="departmentid" placeholder="Enter department id">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Employee ID</label>
-                                                    <select class="form-control">
-                                                        <option>Sales</option>
-                                                        <option>Marketing</option>
-                                                    </select>
-                                                </div>
+                                                    <label for="departmentname">Department Name</label>
+                                                    <input type="text" class="form-control" id="departmentname" placeholder="Enter department name">
+                                                </div>        
                                                 <div class="form-group">
-                                                    <label>Employee First Name</label>
-                                                    <input type="fname" class="form-control" placeholder="first name" disabled/>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Employee Last Name</label>
-                                                    <input type="lname" class="form-control" placeholder="last name" disabled/>
+                                                    <label>Department Description</label>
+                                                    <textarea class="form-control" name="description" id="address" rows="3" placeholder="Enter description" disabled></textarea>
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div><!-- /.box-body -->
-
                                     <div class="box-footer">
-                                            <button class="btn btn-primary" onclick="location.href = 'employeeModify&Delete.php'">Confirm</button>
+                                            <button type="add" class="btn btn-primary">Add</button>
                                     </div>
-<!--                                </form>-->
+                                </form>
 
                             </div><!-- /.box -->
 
@@ -103,3 +87,4 @@
 
     </body>
 </html>
+
