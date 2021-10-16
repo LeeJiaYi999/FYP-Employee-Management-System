@@ -3,6 +3,7 @@ session_start();
 include("db_connection.php");
 ?>
 
+>>>>>>> origin/master
 <html>
     <head>
         <meta charset="UTF-8">

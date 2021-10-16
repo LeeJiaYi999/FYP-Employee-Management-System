@@ -69,37 +69,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>Employee Name</label>
-                                                    <input type="text" class="form-control" name="ename" id="ename" placeholder="Enter Eployee Name" value="<?php
+                                                    <input type="text" class="form-control" name="ename" id="ename" placeholder="Enter Eployee Name" required="required" 
+                                                           value="<?php
                                                     echo $_SESSION["User"]["employee_name"];
                                                     ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Password</label>
-                                                    <input type="password" class="form-control" name="password" id="lname" placeholder="Enter Password" value="<?php
+                                                    <input type="password" class="form-control" name="password" id="lname" placeholder="Enter Password" required="required" 
+                                                           value="<?php
                                                     echo $_SESSION["User"]["password"];
                                                     ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>IC Number</label>
-                                                    <input type="text" class="form-control" name="ic" id="ic" placeholder="Enter IC Number" value="<?php
+                                                    <input type="text" class="form-control" name="ic" id="ic" placeholder="Enter IC Number" required="required" 
+                                                           value="<?php
                                                     echo $_SESSION["User"]["ic_no"];
                                                     ?>">
                                                 </div> 
                                                 <div class="form-group">
                                                     <label>Email</label>
-                                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" value="<?php
+                                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" required="required" 
+                                                           value="<?php
                                                     echo $_SESSION["User"]["email"];
                                                     ?>">
                                                 </div> 
                                                 <div class="form-group">
                                                     <label>Phone Number</label>
-                                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone Number" value="<?php
+                                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone Number" required="required" 
+                                                           value="<?php
                                                     echo $_SESSION["User"]["phone_no"];
                                                     ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Address</label>
-                                                    <textarea class="form-control" name="address" id="address" rows="3" placeholder="Enter Address" ><?php
+                                                    <textarea class="form-control" name="address" id="address" rows="3" placeholder="Enter Address" required="required"><?php
                                                         echo $_SESSION["User"]["address"];
                                                         ?></textarea>
                                                 </div>

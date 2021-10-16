@@ -1,3 +1,6 @@
+<?php
+include("db_connection.php");
+?>
 <html>
     <head><meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'></head>
     <body class="skin-black">
@@ -75,11 +78,16 @@
                 <!-- /.search form -->
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu">
-                    <li class="active">
-                        <a href="home.php">
-                            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    <?php
+                    if ($_SESSION["User"]["employee_type"] === "Admin") {
+                        echo"<li class='active'>
+                        <a href='home.php'>
+                            <i class='fa fa-dashboard'></i> <span>Dashboard</span>
                         </a>
-                    </li>
+                    </li>";
+                    }
+                    ?>
+
                     <li>
 
                     <li class="treeview">
@@ -161,7 +169,6 @@
                             <li><a href="taskList.php"><i class="fa fa-angle-double-right"></i> Task</a></li>
                         </ul>
                     </li>
-
                     <li>
                         <a href="pages/mailbox.html">
                             <i class="fa fa-envelope"></i> <span>Payroll</span>

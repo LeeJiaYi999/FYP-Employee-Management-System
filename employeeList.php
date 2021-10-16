@@ -3,6 +3,8 @@ session_start();
 include("db_connection.php");
 ?>
 
+=======
+>>>>>>> origin/master
 <!DOCTYPE html>
 <html>
     <head>
